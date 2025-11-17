@@ -1,3 +1,7 @@
+export WW_LLM_PROVIDER=ollama
+export WW_OLLAMA_URL=http://localhost:11434
+export WW_LLM_MODEL=llama3.2
+
 #======================#
 # Install, clean, test #
 #======================#
@@ -23,9 +27,8 @@ test_structure:
 #          API         #
 #======================#
 
-run_api:
-	uvicorn api.fast:app --reload --port 8000
-
+serve:
+	uvicorn api.fast:app --host 0.0.0.0 --port 8000 --reload
 
 #======================#
 #          GCP         #
