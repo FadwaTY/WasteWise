@@ -18,3 +18,6 @@ pandas==2.2.3
 fastapi
 uvicorn
 python-multipart
+ultralytics
+opencv-python-headless
+pillow
