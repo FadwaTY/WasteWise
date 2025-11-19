@@ -21,3 +21,5 @@ python-multipart
 ultralytics
 opencv-python-headless
 pillow
+opencv-python
+tensorflow==2.16.2
