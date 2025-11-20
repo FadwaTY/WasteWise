@@ -22,9 +22,9 @@ else
   fi
 fi
 
-# Check if packagename has been changed
-if [[ -e "packagename" ]]; then
-  echo -e "\e[0;31mERROR:   \e[0mYou should rename your package (currently 'packagename')
+# Check if wastewise has been changed
+if [[ -e "wastewise" ]]; then
+  echo -e "\e[0;31mERROR:   \e[0mYou should rename your package (currently 'wastewise')
          (Don't forget to update setup.py too)\e[0m";
   ((errors++));
 fi

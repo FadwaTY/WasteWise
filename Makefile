@@ -81,6 +81,7 @@ docker_build_alternative:
 
 docker_run:
 	docker run \
+		--rm \
 		--platform linux/amd64 \
 		-e PORT=8000 -p $(DOCKER_LOCAL_PORT):8000 \
 		--env-file .env \

@@ -1,7 +1,8 @@
 # TODO: Import your package, replace this by explicit imports of what you need
-from packagename.main import predict
+from wastewise.new import run_inference
 
-from fastapi import FastAPI
+
+from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
@@ -36,3 +37,9 @@ def get_predict(input_one: float,
             'input_two': input_two
         }
     }
+
+@app.post("/detect")
+async def detect(file: UploadFile = File(...)):
+    image_bytes = await file.read()
+    result = run_inference(image_bytes)
+    return {"detections": result}

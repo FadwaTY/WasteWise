@@ -17,3 +17,11 @@ pandas==2.2.3
 # API
 fastapi
 uvicorn
+python-multipart
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
+ultralytics
+opencv-python-headless
+pillow
+opencv-python
+tensorflow==2.16.2
