@@ -111,6 +111,7 @@ docker_push:
 
 docker_deploy:
 	gcloud run deploy \
+		--allow-unauthenticated \
 		--image $(DOCKER_IMAGE_PATH):prod \
 		--memory $(GAR_MEMORY) \
 		--region $(GCP_REGION) \
