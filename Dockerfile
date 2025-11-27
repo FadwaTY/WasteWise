@@ -1,28 +1,17 @@
-# TODO: select a base image
-# Tip: start with a full base image, and then see if you can optimize with
-#      a slim or tensorflow base
-
-#      Standard version
-FROM python:3.12
-
-#      Slim version
-# FROM python:3.12-slim
-
-#      Tensorflow version (attention: won't run on Apple Silicon)
-# FROM tensorflow/tensorflow:2.16.1
+FROM ultralytics/ultralytics:latest-cpu
 
 # Install requirements
-COPY requirements.txt requirements.txt
+COPY requirements_docker.txt requirements.txt
 RUN pip install --no-cache-dir --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy our code
-COPY packagename packagename
+COPY wastewise wastewise
 COPY api api
-
+COPY models models
 # Make directories that we need, but that are not included in the COPY
 RUN mkdir /raw_data
-RUN mkdir /models
+# RUN mkdir /models
 
 # COPY credentials.json credentials.json
 

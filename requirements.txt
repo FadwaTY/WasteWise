@@ -7,7 +7,7 @@ pandas==2.2.3
 
 # Install the correct TensorFlow version
 # Uncomment if you use TensorFlow
-# tensorflow==2.16.2    # For both Intel and Apple silicon
+tensorflow==2.16.2    # For both Intel and Apple silicon
 # keras==3.8.0
 
 # Google Cloud
@@ -17,3 +17,13 @@ pandas==2.2.3
 # API
 fastapi
 uvicorn
+python-multipart
+torch --index-url https://download.pytorch.org/whl/cpu
+torchvision --index-url https://download.pytorch.org/whl/cpu
+ultralytics
+opencv-python-headless
+pillow
+opencv-python
+
+# Google Gemini AI (nouvelle librairie)
+google-genai>=0.14.0
